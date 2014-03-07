@@ -2,8 +2,7 @@
   "name": "atom-gist",
   "main": "./lib/atom-gist",
   "version": "0.0.0",
-  "description": "A short description of your package",
-  "activationEvents": ["atom-gist:toggle"],
+  "description": "Gist for Atom",
   "repository": "https://github.com/atom/atom-gist",
   "license": "MIT",
   "engines": {
