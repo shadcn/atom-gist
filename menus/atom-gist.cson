@@ -1,0 +1,16 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  '.overlayer':
+      'Enable atom-gist': 'atom-gist:toggle'
+
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'atom-gist'
+      'submenu': [
+        { 'label': 'Toggle', 'command': 'atom-gist:toggle' }
+      ]
+    ]
+  }
+]
