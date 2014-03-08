@@ -3,6 +3,9 @@
   "main": "./lib/atom-gist",
   "version": "0.0.0",
   "description": "Gist for Atom",
+  "activationEvents": [
+    "gist:git-file"
+  ],
   "repository": "https://github.com/atom/atom-gist",
   "license": "MIT",
   "engines": {
