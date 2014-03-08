@@ -12,9 +12,15 @@ module.exports =
   gistFile: ->
     @gist = new Gist;
 
-    @gist.files =
-      'foo':
-        'content': 'foo bar baz'
+    workspace = atom.workspace
+    activeItem = workspace.activePane.activeItem
+
+    # Show message in statusBar.
+    atom.workspaceView.statusBar?.appendLeft '<span class="gist-message">Creating gist...</span>'
+
+    # Get content from active file.
+    @gist.files[activeItem.getTitle()] =
+     content: activeItem.getText()
 
     @gist.create (response) =>
-      console.log response.html_url
+        atom.workspaceView.statusBar?.find('.gist-message').html("Gist created at " + response.html_url)

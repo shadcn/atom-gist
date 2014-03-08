@@ -5,7 +5,7 @@ module.exports =
 
     constructor: ->
       @public = true
-      @description = "Lipsum dolor sample gist"
+      @description = ''
       @files = {}
 
     create: (callback) ->
